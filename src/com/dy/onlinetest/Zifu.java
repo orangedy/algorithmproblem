@@ -1,5 +1,11 @@
 package com.dy.onlinetest;
 
+/**
+ * 去掉一个字符串中出现在另一个字符串中的字符
+ * 
+ * @author Administrator
+ *
+ */
 public class Zifu {
 
 	public static void main(String[] args) {

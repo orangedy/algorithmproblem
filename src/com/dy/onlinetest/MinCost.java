@@ -2,6 +2,12 @@ package com.dy.onlinetest;
 
 import java.util.Scanner;
 
+/**
+ * 求最小费用，直接搜索
+ * 
+ * @author Administrator
+ *
+ */
 public class MinCost {
 
 	public static void main(String[] args) {

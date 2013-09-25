@@ -311,7 +311,7 @@ public class Sort {
 	public static int findPosition(int[] a, int start, int end){
 		int element = a[start];
 		while(start < end){
-			while(start < end && a[end] > element){
+			/*while(start < end && a[end] > element){
 				end--;
 			}
 			if(start < end){
@@ -324,7 +324,15 @@ public class Sort {
 			if(start < end){
 				swap(a, start, end);
 				end--;
+			}*/
+			while(start < end && a[end] >= element){
+				end--;
 			}
+			a[start] = a[end];
+			while(start < end && a[start] <= element){
+				start++;
+			}
+			a[end] = a[start];
 		}
 		a[start] = element;
 		return start;
