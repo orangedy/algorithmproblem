@@ -6,10 +6,22 @@ package com.dy.basicAlgorithm;
  * @author orangedy
  * @version 2013-9-17 下午3:19:57
  */
+/**
+ * @author Administrator
+ *
+ */
+/**
+ * @author Administrator
+ *
+ */
+/**
+ * @author Administrator
+ *
+ */
 public class Sort {
 
 	public static void main(String[] args) {
-		int[] a = { 3, 4, 7, 10, 2, 5, 6, 8, 9, 1 };
+		int[] a = { 3, 4, 7, 10, 2, 5, 6, 8, 9, 11 ,1};
 //		Sort.bubbleSort(a, a.length);
 //		Sort.bubbleSortWithFlag(a, a.length);
 //		Sort.bubbleSort2(a, a.length);
@@ -18,8 +30,8 @@ public class Sort {
 //		Sort.shellSort(a, a.length);
 //		Sort.selectSort(a, a.length);
 //		Sort.mergeSort(a, a.length);
-//		Sort.minHeapSort(a, a.length);
-		Sort.quickSort(a, a.length);
+		Sort.minHeapSort(a, a.length);
+//		Sort.quickSort(a, a.length);
 	}
 
 	/**
@@ -263,7 +275,7 @@ public class Sort {
 	 * @param size
 	 */
 	public static void minHeapSort(int[] a, int size){
-		for(int i = size/2 - 1; i >= 0; i--){
+		for(int i = size/2 - 1; i >= 0; i--){  //注意这里的下标，size/2 - 1
 			minHeapAdjust(a, i, size);
 		}
 		for(int i = 0; i < size; i++){
@@ -299,6 +311,13 @@ public class Sort {
 		printArray(a, a.length);
 	}
 	
+	/**
+	 * 快速排序实现代码，需熟练
+	 * 
+	 * @param a
+	 * @param start
+	 * @param end
+	 */
 	public static void qSort(int[] a, int start, int end){
 		if(start < end){
 			int position = findPosition(a, start, end);
@@ -306,7 +325,6 @@ public class Sort {
 			qSort(a, position + 1, end);
 		}
 	}
-
 	
 	public static int findPosition(int[] a, int start, int end){
 		int element = a[start];
